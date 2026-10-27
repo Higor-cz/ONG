@@ -75,6 +75,8 @@ nav {
     gap: 16px;
     padding: 16px 12px 24px;
     background-color: var(--verde_claro);
+    max-width: 1200px; 
+    margin: 0 auto;
 }
 .nossos_projetos h1{
     background-color: var(--verde_escuro);
