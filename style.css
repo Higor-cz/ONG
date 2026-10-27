@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: var(--verde_claro);
+}
+:root{
+    --verde_floresta:#164B2D;
+    --verde_escuro:#2F6B45;
+    --verde_claro:#DCEFE3;
+    --creme:#F4F1E8;
+    --caramelo:#DDAA72;
+    --rosa:#E9A7A0;
+    --grafite:#292B29;
+}
+.topo_da_pagina {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: var(--caramelo);
+    
+}
+.topo_da_pagina img{
+    height: auto;  
+    width: 250px; 
+}
+.informacoes{
+    background-color: var(--verde_escuro);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5%;    
+    align-items: center;
+    
+}
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.informacoes img{
+    height: 50px;
+    
+
+}
+.informacoes a{
+    background-color: #DCEFE3;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--grafite);
+    border-radius: 10%;
+    font-size: larger;
+    padding: 3%;
+}
+.sobre_nos{
+    font-size: xx-large;
+    background-color: #DCEFE3;
+}
+.galeria_1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: #DCEFE3;
+}
+.nossos_projetos h1{
+    background-color: var(--verde_escuro);
+    color: var(--creme);
+    padding: 1%;
+    text-align: center;
+    border: 5px solid var(--verde_floresta) ;
+
+}
+.galeria_1 img{
+    height: 550px;
+    width: 550px;
+    border-radius: 50%;
+    border: 5px solid var(--grafite);
+    margin: 4%;
+}
+.galeria_2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: #DCEFE3;
+}
+.galeria_2 img{
+    height: 550px;
+    width: 550px;
+    border-radius: 50%;
+    border: 5px solid var(--grafite);
+    margin: 4%;
+}
+.como_doar h1{
+    background-color: var(--verde_escuro);
+    color: var(--creme);
+    padding: 1%;
+    text-align: center;
+    border: 5px solid var(--verde_floresta) ;
+}
+.card_doacao{
+    background-color: #292B29;
+    display: flex;
+    justify-content: center;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    justify-content: center;
+}
+
+.cards label{
+    cursor: pointer;
+    background-color: var(--creme);
+    width: 350px;
+    margin: 10px;
+    padding: 3px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--grafite);
+}
+.cards input:checked + div{
+    border: 5px solid var(--grafite);
+    color: var(--creme);
+    background-color: var(--verde_floresta);
+}
+.cards input{
+    display: none;
+}
+.button{
+    background-color: var(--grafite);
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+.button button{
+    width: 732px;    
+    padding: 10px;
+    font-size: x-large;
+    background-color: var(--verde_floresta);
+    color: var(--creme);
+}
+.button button:hover{
+    background-color: var(--verde_escuro);
+}
+
+.contatos{
+    background-color: var(--verde_escuro);
+    display: block;
+}
+.adocao h1{
+    background-color: var(--verde_escuro);
+    color: var(--creme);
+    padding: 1%;
+    text-align: center;}
+.contatos{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: var(--verde_claro);
+    font-size: x-large;
+    }
+
+footer{
+    background-color: var(--grafite);
+    color: var(--creme);
+}
+
