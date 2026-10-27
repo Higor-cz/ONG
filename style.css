@@ -84,6 +84,7 @@ nav {
     padding: 1%;
     text-align: center;
     border: 5px solid var(--verde_floresta) ;
+    margin: 0 auto;
 
 }
 .galeria_1 img, .galeria_2 img{
