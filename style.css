@@ -1,10 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;    
 }
 body{
     background-color: var(--verde_claro);
+    min-width: 320px;
+}
+img {
+    max-width: 100%;
 }
 :root{
     --verde_floresta:#164B2D;
@@ -27,11 +31,12 @@ body{
     width: 250px; 
 }
 .informacoes{
-    background-color: var(--verde_escuro);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 5%;    
+    grid-template-columns: auto repeat(4, minmax(0, 1fr));
     align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    background-color: var(--verde_escuro);
     
 }
 nav {
@@ -41,27 +46,35 @@ nav {
 }
 
 .informacoes img{
+    display: block;
+    width: 50px;
     height: 50px;
-    
-
+    object-fit: contain;
 }
 .informacoes a{
-    background-color: #DCEFE3;
-    width: fit-content;
-    text-decoration: none;
+    display: block;
+    min-width: 0;
+    padding: 10px 6px;
+    border-radius: 6px;
+    background-color: var(--verde_claro);
     color: var(--grafite);
-    border-radius: 10%;
-    font-size: larger;
-    padding: 3%;
+    text-decoration: none;
+    text-align: center;
+    font-size: clamp(12px, 1.1vw, 17px);
+    overflow-wrap: anywhere;
 }
 .sobre_nos{
     font-size: xx-large;
-    background-color: #DCEFE3;
+    background-color: var(--verde_claro);
 }
-.galeria_1{
+.galeria_1,.galeria_2{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    background-color: #DCEFE3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    justify-items: center;
+    gap: 16px;
+    padding: 16px 12px 24px;
+    background-color: var(--verde_claro);
 }
 .nossos_projetos h1{
     background-color: var(--verde_escuro);
@@ -71,24 +84,16 @@ nav {
     border: 5px solid var(--verde_floresta) ;
 
 }
-.galeria_1 img{
-    height: 550px;
-    width: 550px;
-    border-radius: 50%;
+.galeria_1 img, .galeria_2 img{
+    display: block;
+    box-sizing: border-box;
+    width: min(85%, 260px);
+    aspect-ratio: 3 / 4;
+    height: auto;
+    object-fit: cover;
     border: 5px solid var(--grafite);
-    margin: 4%;
-}
-.galeria_2{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    background-color: #DCEFE3;
-}
-.galeria_2 img{
-    height: 550px;
-    width: 550px;
     border-radius: 50%;
-    border: 5px solid var(--grafite);
-    margin: 4%;
+    margin: 0;
 }
 .como_doar h1{
     background-color: var(--verde_escuro);
@@ -165,4 +170,150 @@ footer{
     background-color: var(--grafite);
     color: var(--creme);
 }
+@media (min-width: 481px) and (max-width: 1024px) {
+    .informacoes {
+        gap: 8px;
+        padding: 8px;
+    }
 
+    .informacoes img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .informacoes a {
+        font-size: 14px;
+        padding: 8px 4px;
+    }
+
+    .galeria_1,
+    .galeria_2 {
+        gap: 10px;
+        padding: 12px 6px 20px;
+    }
+
+    .galeria_1 img,
+    .galeria_2 img {
+        width: 90%;
+        border-width: 4px;
+    }
+
+    .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 440px;
+    gap: 12px;
+    margin: 0 auto 16px;
+}
+
+.cards label {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 8px 4px;
+}
+
+.button {
+    width: 100%;
+    padding: 0;
+}
+
+.button button {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 440px;
+    min-height: 52px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+    .contatos {
+        flex-wrap: wrap;
+        gap: 24px;
+        padding: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .informacoes {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 5px;
+        padding: 8px 5px;
+    }
+
+    .informacoes img {
+        display: none;
+    }
+
+    .informacoes a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 5px 2px;
+        font-size: 12px;
+        overflow-wrap: normal;
+    }
+
+    .galeria_1,
+    .galeria_2 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px 8px 24px;
+    }
+
+    .galeria_1 img,
+    .galeria_2 img {
+        width: min(75%, 240px);
+        border-width: 4px;
+    }
+
+    .nossos_projetos h1,
+    .como_doar h1,
+    .adocao h1 {
+        font-size: 1.4rem;
+        padding: 10px 4px;
+    }
+
+    .sobre_nos {
+        font-size: 1.2rem;
+    }
+
+    .cards {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+    }
+
+    .cards label {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .button {
+        padding: 12px;
+    }
+
+    .button button {
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .contatos {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 16px;
+        font-size: 1rem;
+    }
+
+    .topo_da_pagina img {
+        max-width: 90%;
+    }
+}
