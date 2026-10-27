@@ -262,15 +262,20 @@ footer{
 
     .galeria_1,
     .galeria_2 {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 16px 8px 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 16px;
+    padding: 16px 8px 24px;
     }
 
     .galeria_1 img,
     .galeria_2 img {
-        width: min(75%, 240px);
-        border-width: 4px;
+    display: block;
+    width: min(75%, 240px);
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 4px;
     }
 
     .nossos_projetos h1,
